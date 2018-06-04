@@ -29,13 +29,12 @@ public class Setup {
 	private void getOperation() {
 
 		input = new Scanner(System.in);
-		System.out.println("Which operation do you want to perform?");
+		System.out.println("Which operation do you want to perform? [add,subtract, multiply, divide]");
 		String op = input.nextLine();
 		
 		switch (op) {
 		case "add":
 			add = new Addition();
-			System.out.println("add");
 			break;
 		case "subtract":
 			subtract = new Subtraction();
