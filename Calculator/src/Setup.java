@@ -6,18 +6,11 @@ public class Setup {
 	private Subtraction subtract;
 	private Multiplication multiply;
 	private Division divide;
+	private Indice indice;
 
 	Scanner input;
 	
 	public Setup() {
-		
-		/*
-		 * 1)Title output DONE
-		 * 2)Which operation
-		 * 3)Numbers
-		 * 4)Pass them to the correct class which calculates and outputs result
-		 * 5)Do you want to calculate something else?
-		 */
 		
 		getOperation();
 		
@@ -27,21 +20,24 @@ public class Setup {
 
 		input = new Scanner(System.in);
 		
-		System.out.println("Which operation do you want to perform? [add,subtract, multiply, divide]");
+		System.out.println("Which operation do you want to perform? (add[+],subtract[-], multiply[*], divide[/], indice[^])");
 		String op = input.nextLine();
 		
 		switch (op) {
-		case "add":
+		case "+":
 			add = new Addition();
 			break;
-		case "subtract":
+		case "-":
 			subtract = new Subtraction();
 			break;
-		case "multiply":
+		case "*":
 			multiply = new Multiplication();
 			break;
-		case "divide":
+		case "/":
 			divide = new Division();
+			break;
+		case "^":
+			indice = new Indice();
 			break;
 		default:
 			getOperation();
