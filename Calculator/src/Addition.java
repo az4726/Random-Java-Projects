@@ -2,9 +2,9 @@ import java.util.Scanner;
 
 public class Addition {
 
-	int number1;
-	int number2;
-	int answer;
+	double number1;
+	double number2;
+	double answer;
 
 	Scanner input;
 
@@ -13,12 +13,12 @@ public class Addition {
 		input = new Scanner(System.in);
 		
 		System.out.println("Type in the first argument");
-		number1 = input.nextInt();
+		number1 = input.nextDouble();
 		
 		System.out.println("Type in the second argument");
-		number2 = input.nextInt();
+		number2 = input.nextDouble();
 		
-		int answer = number1 + number2;
+		answer = number1 + number2;
 		System.out.println("The answer to " + number1 + " + " + number2 + " = " + answer);
 		
 	}

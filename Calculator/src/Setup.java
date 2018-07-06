@@ -7,9 +7,6 @@ public class Setup {
 	private Multiplication multiply;
 	private Division divide;
 
-	private int number1;
-	private int number2;
-
 	Scanner input;
 	
 	public Setup() {
@@ -29,6 +26,7 @@ public class Setup {
 	private void getOperation() {
 
 		input = new Scanner(System.in);
+		
 		System.out.println("Which operation do you want to perform? [add,subtract, multiply, divide]");
 		String op = input.nextLine();
 		
@@ -46,12 +44,18 @@ public class Setup {
 			divide = new Division();
 			break;
 		default:
-
+			getOperation();
 			break;
 		}
 
 		input.close();
 
+	}
+	
+	public void anotherOperation() {
+		
+		
+		
 	}
 	
 }

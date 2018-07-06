@@ -1,26 +1,26 @@
 import java.util.Scanner;
 
 public class Division {
-	
-	int number1;
-	int number2;
-	int answer;
+
+	double number1;
+	double number2;
+	double answer;
 
 	Scanner input;
 
 	public Division() {
-		
+
 		input = new Scanner(System.in);
-		
+
 		System.out.println("Type in the first argument");
-		number1 = input.nextInt();
-		
+		number1 = input.nextDouble();
+
 		System.out.println("Type in the second argument");
-		number2 = input.nextInt();
-		
-		int answer = number1 / number2;
+		number2 = input.nextDouble();
+
+	    answer = number1 / number2;
 		System.out.println("The answer to " + number1 + " / " + number2 + " = " + answer);
-		
+
 	}
 
 }
