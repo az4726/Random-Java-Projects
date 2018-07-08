@@ -4,7 +4,7 @@ public class Indice {
 
 	int base;
 	int power;
-	int answer;
+	double answer;
 
 	Scanner input;
 
@@ -18,11 +18,7 @@ public class Indice {
 		System.out.println("Type in the power");
 		power = input.nextInt();
 
-		answer = base;
-
-		for (int x = 2; x <= power; x++) {
-			answer *= base;
-		}
+		answer = Math.pow(base, power);
 		
 		System.out.println("The answer to " + base + "^" + power + " = " + answer);
 

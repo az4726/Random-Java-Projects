@@ -7,6 +7,8 @@ public class Setup {
 	private Multiplication multiply;
 	private Division divide;
 	private Indice indice;
+	private RadianConverter radian;
+	private DegreeConverter degree;
 
 	Scanner input;
 	
@@ -20,24 +22,54 @@ public class Setup {
 
 		input = new Scanner(System.in);
 		
-		System.out.println("Which operation do you want to perform? (add[+],subtract[-], multiply[*], divide[/], indice[^])");
+		System.out.println("Which operation do you want to perform? [Type in the letter for the function you want to perform]");
+		System.out.println("add[a]");
+		System.out.println("subtract[s]");
+		System.out.println("divide[d]");
+		System.out.println("multiply[m]");
+		System.out.println("indice[i]");
+		System.out.println("radian converter[r]");
+		System.out.println("degree converter[c]");
+		System.out.println("EXIT[e]");
 		String op = input.nextLine();
 		
 		switch (op) {
-		case "+":
+		case "a":
 			add = new Addition();
+			System.out.println("\n");
+			getOperation();
 			break;
-		case "-":
+		case "s":
 			subtract = new Subtraction();
+			System.out.println("\n");
+			getOperation();
 			break;
-		case "*":
+		case "m":
 			multiply = new Multiplication();
+			System.out.println("\n");
+			getOperation();
 			break;
-		case "/":
+		case "d":
 			divide = new Division();
+			System.out.println("\n");
+			getOperation();
 			break;
-		case "^":
+		case "i":
 			indice = new Indice();
+			System.out.println("\n");
+			getOperation();
+			break;
+		case "r":
+			radian = new RadianConverter();
+			System.out.println("\n");
+			getOperation();
+			break;
+		case "c":
+			degree = new DegreeConverter();
+			System.out.println("\n");
+			getOperation();
+			break;
+		case "e":
 			break;
 		default:
 			getOperation();
@@ -46,12 +78,6 @@ public class Setup {
 
 		input.close();
 
-	}
-	
-	public void anotherOperation() {
-		
-		
-		
 	}
 	
 }
