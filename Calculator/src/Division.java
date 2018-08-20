@@ -1,5 +1,11 @@
 import java.util.Scanner;
 
+/**
+ * This class is used to divide two numbers
+ * 
+ * @author Azhar Zaman
+ * @version 1.0
+ */
 public class Division {
 
 	double number1;
@@ -8,6 +14,11 @@ public class Division {
 
 	Scanner input;
 
+	/**
+	 * The constructor initialises the Scanner and uses it to read the input from
+	 * the user. The calculation is performed and the answer is then returned to 
+	 * the user.
+	 */
 	public Division() {
 
 		input = new Scanner(System.in);

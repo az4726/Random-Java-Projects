@@ -1,5 +1,11 @@
 import java.util.Scanner;
 
+/**
+ * This class is used to multiply two numbers
+ * 
+ * @author Azhar Zaman
+ * @version 1.0
+ */
 public class Multiplication {
 	
 	double number1;
@@ -8,6 +14,11 @@ public class Multiplication {
 
 	Scanner input;
 
+	/**
+	 * The constructor initialises the Scanner and uses it to read the input from
+	 * the user. The calculation is performed and the answer is then returned to 
+	 * the user.
+	 */
 	public Multiplication() {
 		
 		input = new Scanner(System.in);

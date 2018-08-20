@@ -1,5 +1,12 @@
 import java.util.Scanner;
 
+/**
+ * This class is used to find the answer to a number multiplied to a power
+ * provided by the user
+ * 
+ * @author Azhar Zaman
+ * @version 1.0
+ */
 public class Indice {
 
 	int base;
@@ -8,6 +15,11 @@ public class Indice {
 
 	Scanner input;
 
+	/**
+	 * The constructor initialises the Scanner and uses it to read the input from
+	 * the user. The calculation is performed and the answer is then returned to 
+	 * the user.
+	 */
 	public Indice() {
 
 		input = new Scanner(System.in);
@@ -19,7 +31,7 @@ public class Indice {
 		power = input.nextInt();
 
 		answer = Math.pow(base, power);
-		
+
 		System.out.println("The answer to " + base + "^" + power + " = " + answer);
 
 	}
