@@ -2,6 +2,7 @@ package pageObjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -22,7 +23,7 @@ public class WorkdaySignInPage {
 
     private final By emailInput = By.id("username");
     private final By loginBtn = By.cssSelector("Button[class='wdc-btn wdc-btn-primary']");
-    private final By welcomeMsg = By.className("welcome");
+    private final By welcomeMsg = By.cssSelector(".welcome");
     private final By passwordInput = By.id("password_field_1");
     private final By errorMessage = By.className("field-error");
 
@@ -48,8 +49,10 @@ public class WorkdaySignInPage {
         webDriver.findElement(loginBtn).click();
     }
 
-    public String readMessage(){
-        return webDriver.findElement(welcomeMsg).getText().trim();
+    public String readMessage() {
+        WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(10));
+        WebElement message = wait.until(ExpectedConditions.visibilityOfElementLocated(welcomeMsg));
+        return message.getText().trim();
     }
 
     public void inputPassword(String password){
