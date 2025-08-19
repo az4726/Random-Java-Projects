@@ -26,3 +26,5 @@ jobs:
           javaHomeOption: 'JDKVersion'
           jdkVersionOption: '11'
           mavenVersionOption: 'Default'
+          targetPath: '$(System.DefaultWorkingDirectory)/seleniumTest/target/surefire-reports'
+          artifact: 'SurefireReports'
