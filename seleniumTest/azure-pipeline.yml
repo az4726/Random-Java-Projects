@@ -16,6 +16,13 @@ jobs:
             echo "Running a single test suite manually."
             echo "##vso[task.setvariable variable=SINGLE_TEST_XML_FILE]src/test/TestNGXMLSuites/SingleTestRun.xml"
 
+      - task: Bash@3
+        displayName: 'Create .env file'
+        inputs:
+          targetType: 'inline'
+          script: |
+            echo "pipeline_run=$(pipeline_run)" >> seleniumTest/.env
+
       - task: Maven@3
         displayName: 'Run Single Test Suite'
         inputs:
