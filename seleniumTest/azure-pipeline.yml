@@ -4,6 +4,9 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
+variables:
+  - group: pipelineStuff
+
 jobs:
   - job: AutomatedTestsJob
     timeoutInMinutes: 720
