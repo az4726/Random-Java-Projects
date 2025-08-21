@@ -21,7 +21,7 @@ jobs:
         inputs:
           targetType: 'inline'
           script: |
-            echo "pipeline_run=$(pipeline_run)" >> seleniumTest/.env
+            echo "PIPELINE_RUN=$(PIPELINE_RUN)" >> seleniumTest/.env
 
       - task: Maven@3
         displayName: 'Run Single Test Suite'
