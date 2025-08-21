@@ -29,7 +29,7 @@ public class WorkdayLoginSteps {
             options.addArguments("--headless=new"); // run without UI
             options.addArguments("--window-size=1920,1080"); // avoid sizing issues
             options.addArguments("--no-sandbox"); // for Linux CI
-            options.addArguments("--disable-dev-shm-usage"); // for container environments
+            //options.addArguments("--disable-dev-shm-usage"); // for container environments
             options.addArguments("user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.50 Safari/537.36");
         }else{
             options.addArguments("--start-maximized"); //maximised window
